@@ -1,24 +1,4 @@
-    // // افزودن افکت فعال شدن لینک منو هنگام اسکرول
-    // const sections = document.querySelectorAll("section");
-    // const navLinks = document.querySelectorAll(".nav-link");
 
-    // window.addEventListener("scroll", () => {
-    //   let current = "";
-
-    //   sections.forEach((section) => {
-    //     const sectionTop = section.offsetTop - 50;
-    //     if (window.scrollY >= sectionTop) {
-    //       current = section.getAttribute("id");
-    //     }
-    //   });
-
-    //   navLinks.forEach((link) => {
-    //     link.classList.remove("active");
-    //     if (link.getAttribute("href") === `#${current}`) {
-    //       link.classList.add("active");
-    //     }
-    //   });
-    // });
     document.addEventListener("DOMContentLoaded", function () {
       const sections = document.querySelectorAll("section"); // گرفتن تمام سکشن‌ها
       const navLinks = document.querySelectorAll(".nav-link"); // لینک‌های منو
