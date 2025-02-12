@@ -25,92 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-// // // hamburger
-// document.addEventListener('DOMContentLoaded', function() {
-//     const menuContainer = document.querySelector('.menu-container');
-//     const hamburger = document.querySelector('.hamburger');
-//     const closeButton = document.querySelector('#closeButton');
-//     const body = document.body;
-
-//     hamburger.addEventListener('click', function() {
-//         if (body.classList.contains('rtl')) {
-//             menuContainer.style.left = '0';
-//             menuContainer.style.right = 'auto';
-//         } else {
-//             menuContainer.style.right = '0';
-//             menuContainer.style.left = 'auto';
-//         }
-//         menuContainer.classList.add('open');
-//     });
-
-//     closeButton.addEventListener('click', function() {
-//         if (body.classList.contains('rtl')) {
-//             menuContainer.style.left = '-100%';
-//             menuContainer.style.right = 'auto';
-//         } else {
-//             menuContainer.style.right = '-100%';
-//             menuContainer.style.left = 'auto';
-//         }
-//         menuContainer.classList.remove('open');
-//     });
-// });
-
-
-
-
-
-
-
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const menuContainer = document.querySelector('.menu-container');
-//     const hamburger = document.querySelector('.hamburger');
-//     const closeButton = document.querySelector('#closeButton');
-//     const body = document.body;
-//     const menuLinks = document.querySelectorAll('.menu-container a');  // لینک‌های منو
-//     const overlay = document.querySelector('.overlay'); // دیو مات
-
-//     hamburger.addEventListener('click', function() {
-//         if (body.classList.contains('rtl')) {
-//             menuContainer.style.left = '0';
-//             menuContainer.style.right = 'auto';
-//         } else {
-//             menuContainer.style.right = '0';
-//             menuContainer.style.left = 'auto';
-//         }
-//         menuContainer.classList.add('open');
-//         overlay.style.display = 'block'; // نمایش دیو مات
-//     });
-
-//     closeButton.addEventListener('click', function() {
-//         if (body.classList.contains('rtl')) {
-//             menuContainer.style.left = '-100%';
-//             menuContainer.style.right = 'auto';
-//         } else {
-//             menuContainer.style.right = '-100%';
-//             menuContainer.style.left = 'auto';
-//         }
-//         menuContainer.classList.remove('open');
-//         overlay.style.display = 'none'; // مخفی کردن دیو مات
-//     });
-
-//     // بستن منو پس از کلیک روی لینک‌ها
-//     menuLinks.forEach(function(link) {
-//         link.addEventListener('click', function() {
-//             if (body.classList.contains('rtl')) {
-//                 menuContainer.style.left = '-100%';
-//                 menuContainer.style.right = 'auto';
-//             } else {
-//                 menuContainer.style.right = '-100%';
-//                 menuContainer.style.left = 'auto';
-//             }
-//             menuContainer.classList.remove('open');
-//             overlay.style.display = 'none'; // مخفی کردن دیو مات
-//         });
-//     });
-// });
-
-
 
 document.addEventListener('DOMContentLoaded', function() {
     const menuContainer = document.querySelector('.menu-container');
@@ -218,111 +132,10 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-console.log("p");
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const menuContainer = document.querySelector('.menu-container');
-//     const hamburger = document.querySelector('.hamburger');
-//     const closeButton = document.querySelector('#closeButton');
-//     const body = document.body;
-
-//     console.log(hamburger);
-//     console.log(menuContainer);
-
-//     hamburger.addEventListener('click', function() {
-//         console.log('Hamburger clicked');
-//         if (body.classList.contains('rtl')) {
-//             menuContainer.style.left = '0';
-//             menuContainer.style.right = 'auto';
-//         } else {
-//             menuContainer.style.right = '0';
-//             menuContainer.style.left = 'auto';
-//         }
-//         menuContainer.classList.add('open');
-//         console.log('Menu open: ', menuContainer.classList.contains('open'));
-//     });
-
-//     closeButton.addEventListener('click', function() {
-//         console.log('Close button clicked');
-//         if (body.classList.contains('rtl')) {
-//             menuContainer.style.left = '-100%';
-//             menuContainer.style.right = 'auto';
-//         } else {
-//             menuContainer.style.right = '-100%';
-//             menuContainer.style.left = 'auto';
-//         }
-//         menuContainer.classList.remove('open');
-//         console.log('Menu open: ', menuContainer.classList.contains('open'));
-//     });
-// });
 
 
 
 
-
-
-
-
-/////////////
-
-// document.addEventListener('DOMContentLoaded', function() {
-//     const hamburger = document.getElementById('hamburger');
-//     const menuContainer = document.querySelector('.menu-container');
-//     const closeButton = document.getElementById('closeButton');
-//     const overlay = document.querySelector('.overlay');
-//     const body = document.body;
-
-//     // بررسی جهت زبان صفحه
-//     const isRtl = document.documentElement.getAttribute('dir') === 'rtl';
-
-//     // باز کردن منو
-//     hamburger.addEventListener('click', function() {
-//         menuContainer.classList.add('open');
-//         overlay.style.display = 'block';
-//         body.classList.add('menu-open'); 
-
-//         // اگر rtl هست، منو از سمت چپ وارد شود
-//         if (isRtl) {
-//             menuContainer.style.transform = 'translateX(0)';
-//         } else {
-//             menuContainer.style.transform = 'translateX(0)';
-//         }
-//     });
-
-//     // بستن منو
-//     function closeMenu() {
-//         menuContainer.classList.remove('open');
-//         overlay.style.display = 'none';
-//         body.classList.remove('menu-open'); 
-
-//         // اگر rtl هست، منو از سمت چپ خارج شود
-//         if (isRtl) {
-//             menuContainer.style.transform = 'translateX(-100%)';
-//         } else {
-//             menuContainer.style.transform = 'translateX(100%)';
-//         }
-//     }
-
-//     closeButton.addEventListener('click', closeMenu);
-//     overlay.addEventListener('click', closeMenu);
-
-//     // حرکت به آدرس مورد نظر در منو
-//     document.querySelectorAll('.menu a').forEach(link => {
-//         link.addEventListener('click', function(e) {
-//             e.preventDefault();
-//             const targetId = this.getAttribute('href');
-//             const targetElement = document.querySelector(targetId);
-
-//             if (targetElement) {
-//                 closeMenu();
-//                 window.scrollTo({
-//                     top: targetElement.offsetTop - 50,
-//                     behavior: 'smooth'
-//                 });
-//             }
-//         });
-//     });
-// });
 
 
 
@@ -332,38 +145,105 @@ console.log("p");
 
     //افکت موس
 
-    const colors = [
-        "rgba(0, 255, 255, 0.1)",   // آبی نئونی
-        // "rgba(180, 0, 255, 0.7)",   // بنفش نئونی
-        // "rgba(255, 0, 150, 0.7)",   // صورتی نئونی
-        // "rgba(255, 215, 0, 0.1)",   // طلایی نئونی
-        // "rgba(0, 255, 100, 0.7)",
-        // "rgba(128, 0, 128, 0.8)" ,    //بنفش سلطنتی 👑
-        //  "rgba(70, 130, 180, 0.3)" ,       // آبی یاقوتی 🔷
-        // "rgba(80, 200, 120, 0.8)",  //سبز زمردی 💎
-        // "rgba(192, 192, 192, 0.8)",     //نقره‌ای متالیک 
-        // "rgba(255, 185, 0, 0.8)",       //طلایی متالیک 💛	
+    // const colors = [
+    //     "rgba(0, 255, 255, 0.1)",   // آبی نئونی
+    //     // "rgba(180, 0, 255, 0.7)",   // بنفش نئونی
+    //     // "rgba(255, 0, 150, 0.7)",   // صورتی نئونی
+    //     // "rgba(255, 215, 0, 0.1)",   // طلایی نئونی
+    //     // "rgba(0, 255, 100, 0.7)",
+    //     // "rgba(128, 0, 128, 0.8)" ,    //بنفش سلطنتی 👑
+    //     //  "rgba(70, 130, 180, 0.3)" ,       // آبی یاقوتی 🔷
+    //     // "rgba(80, 200, 120, 0.8)",  //سبز زمردی 💎
+    //     // "rgba(192, 192, 192, 0.8)",     //نقره‌ای متالیک 
+    //     // "rgba(255, 185, 0, 0.8)",       //طلایی متالیک 💛	
     
-    ];
+    // ];
     
-    document.addEventListener("mousemove", (e) => {
-        let trail = document.createElement("div");
-        trail.classList.add("trail");
-        document.body.appendChild(trail);
+    // document.addEventListener("mousemove", (e) => {
+    //     let trail = document.createElement("div");
+    //     trail.classList.add("trail");
+    //     document.body.appendChild(trail);
     
-        let randomColor = colors[Math.floor(Math.random() * colors.length)];
-        trail.style.background = randomColor;
-        trail.style.filter = `drop-shadow(0 0 10px ${randomColor})`;
+    //     let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    //     trail.style.background = randomColor;
+    //     trail.style.filter = `drop-shadow(0 0 10px ${randomColor})`;
     
-        trail.style.left = `${e.pageX}px`;
-        trail.style.top = `${e.pageY}px`;
+    //     trail.style.left = `${e.pageX}px`;
+    //     trail.style.top = `${e.pageY}px`;
     
-        setTimeout(() => {
-            trail.style.transform = "scale(2)";
-            trail.style.opacity = "0";
-        }, 10);
+    //     setTimeout(() => {
+    //         trail.style.transform = "scale(2)";
+    //         trail.style.opacity = "0";
+    //     }, 10);
     
-        setTimeout(() => {
-            trail.remove();
-        }, 500);
-    });
+    //     setTimeout(() => {
+    //         trail.remove();
+    //     }, 500);
+    // });
+/////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const colors = [
+    "rgba(0, 255, 255, 0.1)",   // آبی نئونی
+    "rgba(180, 0, 255, 0.7)",   // بنفش نئونی
+    "rgba(255, 0, 150, 0.7)",   // صورتی نئونی
+    "rgba(255, 215, 0, 0.1)",   // طلایی نئونی
+    "rgba(0, 255, 100, 0.7)",   // سبز نئونی
+    "rgba(128, 0, 128, 0.8)",   // بنفش سلطنتی
+    "rgba(70, 130, 180, 0.3)", // آبی یاقوتی
+    "rgba(80, 200, 120, 0.8)", // سبز زمردی
+    "rgba(192, 192, 192, 0.8)", // نقره‌ای متالیک
+    "rgba(255, 185, 0, 0.8)"    // طلایی متالیک
+];
+
+document.addEventListener("mousemove", (e) => {
+    createMouseTrail(e);
+});
+
+function createMouseTrail(e) {
+    let trail = document.createElement("div");
+    trail.classList.add("trail");
+    document.body.appendChild(trail);
+
+    let randomColor = colors[Math.floor(Math.random() * colors.length)];
+    trail.style.background = randomColor;
+    trail.style.filter = `drop-shadow(0 0 10px ${randomColor})`;
+
+    trail.style.left = `${e.pageX}px`;
+    trail.style.top = `${e.pageY}px`;
+
+    setTimeout(() => {
+        trail.style.transform = "scale(2)";
+        trail.style.opacity = "0";
+    }, 10);
+
+    setTimeout(() => {
+        trail.remove();
+    }, 500);
+}
