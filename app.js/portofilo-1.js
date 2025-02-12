@@ -1,5 +1,4 @@
-
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
       const sections = document.querySelectorAll("section"); // گرفتن تمام سکشن‌ها
       const navLinks = document.querySelectorAll(".nav-link"); // لینک‌های منو
     
@@ -14,6 +13,20 @@
     
       updateActiveLink();
       window.addEventListener("scroll", updateActiveLink);
+    
+      fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('name').textContent = data.name;
+          document.getElementById('position').textContent = data.position;
+          document.getElementById('description').textContent = data.description;
+          document.getElementById('about-first-paragraph').textContent = data.about.firstParagraph;
+          document.getElementById('about-second-paragraph').textContent = data.about.secondParagraph;
+          document.getElementById('about-third-paragraph').textContent = data.about.thirdParagraph;
+          document.getElementById('about-fourth-paragraph').textContent = data.about.fourthParagraph;
+          // Add more code to populate other elements as needed
+        })
+        .catch(error => console.error('Error loading JSON data:', error));
     });
     
     
@@ -87,3 +100,16 @@
           trail.remove();
       }, 500);
   });
+
+const data = {
+  "name": "Your Name",
+  "position": "Your Position",
+  "description": "A brief description about yourself.",
+  "about": {
+    "firstParagraph": "This is the first paragraph about you.",
+    "secondParagraph": "This is the second paragraph about you.",
+    "thirdParagraph": "This is the third paragraph about you.",
+    "fourthParagraph": "This is the fourth paragraph about you."
+  }
+  // Add more fields as needed
+};
